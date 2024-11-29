@@ -3,12 +3,12 @@
     "magic": "APF_VER_1",
     "metadata": {
       "platform_ids": ["lynx"],
-      "shortname": "Lynx",
-      "description": "Atari Lynx",
+      "shortname": "Lynx_Analogizer",
+      "description": "[Analogizer] Atari Lynx",
       "author": "budude2",
-      "url": "https://github.com/budude2/openfpga-AtariLynx",
-      "version": "1.0.1",
-      "date_release": "2024-09-01"
+      "url": "https://github.com/RndMnkIII/Analogizer-openfpga-AtariLynx",
+      "version": "1.0.0",
+      "date_release": "2024-11-30"
     },
     "framework": {
       "target_product": "Analogue Pocket",
@@ -20,7 +20,7 @@
       },
       "hardware": {
         "link_port": false,
-        "cartridge_adapter": -1
+        "cartridge_adapter": 0
       }
     },
     "cores": [
