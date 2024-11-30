@@ -42,7 +42,7 @@ Be careful when handling this switch. Use something with a thin, flat tip such a
 ``` 
 
 The following options exist in the core menu to configure Analogizer:
-* **Analog Wide (Only CRT)** Check: Enable/Disable (this will freeze the Pocket screen in GBC mode, to avoid screen tearing).
+* **240p** Check: Enable/Disable doubled resolution.
 * **SNAC Adapter** List: None, DB15,NES,SNES,PCE,PCE Multitap, SNES swap A,B<->X,Y buttons, PSX (Digital DPAD), PSX (Analog DPAD).
 * **SNAC Controller Assignment** List: several options about how to map SNAC controller to P1 Pocket controls. The controls not mapped to SNAC by default will map to Pocket connected controllers (Pocket built-in or Dock).
 * **Analogizer Video Out** List: you can choose between RGBS (VGA to SCART), RGsB (works is a PVM as YPbPr but using RGB color space), YPbPr (for TV with component video input),
