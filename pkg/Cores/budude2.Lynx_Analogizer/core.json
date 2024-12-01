@@ -7,8 +7,8 @@
       "description": "[Analogizer] Atari Lynx",
       "author": "budude2",
       "url": "https://github.com/RndMnkIII/Analogizer-openfpga-AtariLynx",
-      "version": "1.0.0",
-      "date_release": "2024-11-30"
+      "version": "1.0.1",
+      "date_release": "2024-12-01"
     },
     "framework": {
       "target_product": "Analogue Pocket",

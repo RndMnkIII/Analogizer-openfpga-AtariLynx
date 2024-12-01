@@ -1,7 +1,8 @@
 # Atari Lynx for Analogue Pocket Core with support for Analogizer-FPGA adapter
 * Analogizer V1.0.0 [30/11/2024]: Added initial support for Analogizer adapter (RGBS, RGsB,   YPbPr, Y/C, SVGA Scandoubler) and SNAC (included PSX DS/DS2). The PSX DS/DS2
   can be used in **Digital DPAD** mode (ignores the analog sticks, regardless of the ANALOG button setting on the controller) or in **Analog DPAD** mode (left analog stick is mapped to DPAD movements)
-
+* Analogizer V1.0.0 [01/12/2024]: Added support for PSX Digital gamepads (SCPH-1010, SCPH-1080, Dance Mats?) 
+  
 Adapted to Analogizer by [@RndMnkIII](https://github.com/RndMnkIII) based on **budude2** Atari Lynx for Analogue Pocket (https://github.com/budude2/openfpga-AtariLynx).
 The core can output RGBS, RGsB, YPbPr, Y/C SVideo and composite and SVGA scandoubler(0%, 25%, 50% 75% scanlines and HQ2x) video signals. 
 

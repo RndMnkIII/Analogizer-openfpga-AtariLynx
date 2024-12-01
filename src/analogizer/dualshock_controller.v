@@ -103,6 +103,21 @@ always @(posedge clk) begin
     end
 end
 
+reg device_id_type /* synthesis preserve */; //1'b1 digital one, 1'b0 analog one
+always @(posedge clk) begin
+    if(! i_RSTn) device_id_type <= 1'b0; 
+    else if (W_byte_cnt == 2) begin
+        case(o_RXD_ID)
+             8'h23:   device_id_type <= 1'b1;
+             8'h41:   device_id_type <= 1'b0;
+             8'h53:   device_id_type <= 1'b1;
+             8'h73:   device_id_type <= 1'b1;
+             8'hE3:   device_id_type <= 1'b1;
+             8'hF3:   device_id_type <= 1'b1;
+             default: device_id_type <= 1'b0;
+        endcase
+    end
+end
 
 wire   W_type = 1'b1 /* synthesis keep */;        // DIGITAL PAD 0, ANALOG PAD 1
 wire   [3:0] W_byte_cnt /* synthesis keep */;
@@ -113,7 +128,7 @@ reg    [7:0]W_TXD_DAT /* synthesis preserve */;
 wire   [7:0]W_RXD_DAT /* synthesis keep */;
 
 ps_pls_gan pls(
-   .clk(clk), .R_CE(R_CE), .i_CLK(i_CLK), .i_RSTn(i_RSTn), .i_TYPE(W_type), 
+   .clk(clk), .R_CE(R_CE), .i_CLK(i_CLK), .i_RSTn(i_RSTn), .i_TYPE(device_id_type), 
    .o_RXWT(W_RXWT), .o_TXWT(W_TXWT), 
    .o_TXEN(W_TXEN), .o_psCLK(o_psCLK), 
    .o_ATT1(o_ATT1), .o_ATT2(o_ATT2), .o_byte_cnt(W_byte_cnt)
